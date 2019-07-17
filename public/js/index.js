@@ -1,4 +1,4 @@
-var socket = io();  // browser will request the server to opne up a web socket connection
+var socket = io();  // browser will request the server to open up a web socket connection
 
 socket.on('connect', function() {
     console.log('Connected to server');
