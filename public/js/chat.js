@@ -24,7 +24,7 @@ socket.on('connect', function() {
 
     socket.emit('join', params, function(err) {
         if(!err) {
-            return console.log('No error');
+            return console.log('Successfully joined room');
         }
         alert(err);
         window.location.href = '/';
@@ -91,7 +91,6 @@ jQuery('#message-form').on('submit', function(e) {
 
     var messageTextBox = jQuery('[name=message]');
     socket.emit('createMessage', {
-        from: 'User',
         text: messageTextBox.val()
     }, function() {
         messageTextBox.val('');
